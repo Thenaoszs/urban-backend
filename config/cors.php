@@ -31,28 +31,9 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [
-        // Développement local
-        'http://localhost',
-        'http://localhost:3000',   // Nuxt JS dev
-        'http://localhost:8080',
-        'http://127.0.0.1',
-        'http://127.0.0.1:3000',
-        // Domaine de développement local
-        'http://backend-citoyen.test',
-        'http://frontend-citoyen.test',
-        // En production : remplacer par les domaines réels
-        // 'https://app.citoyen.tg',
-        // 'https://admin.citoyen.tg',
-    ],
+    'allowed_origins' => ['*'],
 
-    'allowed_origins_patterns' => [
-        // Autorise toutes les origines locales (développement)
-        '#^http://localhost(:\d+)?$#',
-        '#^http://127\.0\.0\.1(:\d+)?$#',
-        // Application mobile Flutter (pas d'origine HTTP classique)
-        // Flutter envoie une origine vide ou null → géré par wildcard ci-dessous
-    ],
+    'allowed_origins_patterns' => ['*'],
 
     'allowed_headers' => [
         'Content-Type',
